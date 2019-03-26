@@ -1,17 +1,20 @@
 // src/Travel.js
 import React from "react";
 
-const Travel = ({ destination, country, photo, distance }) => (
-    <div class="travel_country">
-        <h1>Travel to {destination}</h1>
+
+const Travel = props => { 
+    return (
+    <div>
+        <h1>Travel to {props.destination}</h1>
     
         <figure>
-            <img src={photo} alt={country} />
+            <img src={props.photo} alt={props.country} />
             <figcaption>
-                Discover {country}, only {distance} miles from France !
+                Discover {props.country}, only {props.distance} miles from France !
             </figcaption>
         </figure>
     </div>
-);
+    );
+};
 
 export default Travel;
